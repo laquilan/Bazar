@@ -20,7 +20,7 @@ wifi-menu
 
 # Create partitions
 cgdisk /dev/sdX
-1 150MB EFI  (hex code ef00)
+1 100MB EFI  (hex code ef00)
 2 250MB Boot (hex code 8300)
 3 100% System (hex code 8300)
 
@@ -68,6 +68,9 @@ hwclock --systohc --utc
 
 # Set the hostname
 echo MYHOSTNAME > /etc/hostname
+
+# Comment/uncomment the mirrors if needed
+vim /etc/pacman.d/mirrorlist
 
 # Update locale
 echo LANG=en_US.UTF-8 >> /etc/locale.conf

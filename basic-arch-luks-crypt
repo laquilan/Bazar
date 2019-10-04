@@ -115,3 +115,8 @@ swapoff -a
 
 # Reboot into the new system, don't forget to remove the cd/usb
 reboot
+
+# After login, specify another grub resolution
+sudo vim /etc/default/grub
+# For instance, change it as below for a FHD display wih 32bits colors
+GRUB_GFXMODE=1920x1080x32
